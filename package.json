@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/andreflint97/dreambot-/issues"
   },
-  "homepage": "https://github.com/andreflint97/dreambot-#readme"
+  "homepage": "https://github.com/andreflint97/dreambot-#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "dotenv": "^8.0.0",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
 }
