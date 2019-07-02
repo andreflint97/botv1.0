@@ -41,6 +41,7 @@ if (process.env.NODE_ENV === "test") {
 /////////////////// START SERVER & SYNC DATABASE ///////////////////////
 models.sequelize.sync(syncOptions).then(function () {
   app.listen(PORT, function () {
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
     console.log("==> 🌎 Port: %s. Visit http://localhost:%s/",
       PORT,
       PORT
