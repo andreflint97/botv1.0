@@ -2,15 +2,19 @@
   "name": "dreambot-",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "atc.js",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "dotenv": "^8.0.0",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.2",
+    "passport-local": "^1.0.0",
+    "passport": "^0.4.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,13 +25,5 @@
   "bugs": {
     "url": "https://github.com/andreflint97/dreambot-/issues"
   },
-  "homepage": "https://github.com/andreflint97/dreambot-#readme",
-  "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "dotenv": "^8.0.0",
-    "express-handlebars": "^3.1.0",
-    "express-session": "^1.16.2",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
-  }
+  "homepage": "https://github.com/andreflint97/dreambot-#readme"
 }
