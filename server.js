@@ -6,7 +6,7 @@ var session     = require('express-session');
 var bodyParser  = require('body-parser');
 var env         = require('dotenv').config();
 var exphbs      = require('express-handlebars');
-var PORT        = process.env.PORT || 3000;
+var PORT        = 7623 || process.env.PORT;
 
 // Parse application body as JSON
 app.use(bodyParser.urlencoded({ extended: true }));
