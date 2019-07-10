@@ -10,11 +10,11 @@ module.exports = function (app, passport) {
         // console.log(req);
         if (req.isAuthenticated()) {
             return next();
-        } else { res.redirect('/signin') };
+        } else { res.redirect('/home') };
     }
     //////////////////// HTML Routes //////////////////////////////////////////////////////////////////////
     app.get('/', authController.signin);
-    app.get('/home', authController.signin);
+    app.get('/signin', authController.signin);
     app.get('/login', authController.signin);
  
     //////////////////// HOME /////////////////////////////////////////////////////////////////////////////
@@ -23,13 +23,13 @@ module.exports = function (app, passport) {
     //////////////////// POST NEW USER ////////////////////////////////////////////////////////////////////
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect: '/home',
-        failureRedirect: '/index'
+        failureRedirect: '/signin'
     }));
     //////////////////// LOGOUT ///////////////////////////////////////////////////////////////////////////
     app.get('/logout', authController.logout);
     //////////////////// SIGN IN POST /////////////////////////////////////////////////////////////////////
     app.post('/signin', passport.authenticate('local-signin', {
         successRedirect: '/home',
-        failureRedirect: '/index'
+        failureRedirect: '/signin'
     }));
 }

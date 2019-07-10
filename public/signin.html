@@ -16,12 +16,12 @@
           </center>
           <center>
             <form id="signup" name="signup" method="post" action="/signup">
-              <label for="username">Username</label>
-              <input class="text" name="username" type="username" />
-              <br>
-              <label for="password">Password</label>
-              <input name="password" type="password" />
-              <br>
+              <label>Username</label>
+        <input type="text" placeholder="" name="username" id="username">
+        <br>
+        <label>Password</label>
+        <input type="text" placeholder="" name="password" id="password">
+        <br>
               <center><input class="btn btn-danger" type="submit" value="Sign Up" /></center>
             </form>
           </center>
@@ -34,14 +34,14 @@
     <div id="signin">
       <center><h1>Sign In</h1></center>
       <center>
-        <form id="signin" name="signin" method="post" action="/signin">
+        <form id="index" name="index" method="post" action="/signin">
           <label>Username</label>
           <input type="text" placeholder="" name="username" id="username">
           <br>
           <label>Password</label>
           <input type="password" placeholder="" name="password" id="password">
           <br>
-          <input class="btn btn-danger" type="submit" value="Sign In" id="login" href="home.html"/>
+          <input class="btn btn-danger" type="submit" value="Sign In" id="login" href="public/home.html"/>
         </form>
         <br>
         <hr>
