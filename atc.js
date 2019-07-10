@@ -2,7 +2,7 @@ var url = window.location.href;
 var i;
 
 var category = "accessories"
-var item_name= "marvin"
+var item_name= "Libertad"
 
 
 
@@ -37,7 +37,7 @@ else if(url == "https://www.supremenewyork.com/shop/all/accessories") {
     document.getElementsByClassName("button checkout")[0].click() 
 }
 
-else if( url != "https://www.supremenewyork.com/shop/checkout") {
+else if( url == "https://www.supremenewyork.com/shop/checkout") {
 document.getElementById("order_billing_name").value="Andre Flint"
 document.getElementById("order_email").value="andreflint97@yahoo.com"
 document.getElementById("order_tel").value="440-752-6066"

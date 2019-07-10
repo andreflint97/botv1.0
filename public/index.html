@@ -6,47 +6,75 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <center>
+            <h1>Create an account!</h1>
+          </center>
+          <center>
+            <form id="signup" name="signup" method="post" action="/signup">
+              <label for="username">Username</label>
+              <input class="text" name="username" type="username" />
+              <br>
+              <label for="password">Password</label>
+              <input name="password" type="password" />
+              <br>
+              <center><input class="btn btn-danger" type="submit" value="Sign Up" /></center>
+            </form>
+          </center>
+        </div>
+    
+      </div>
+      <div id="signin">
     <div class="loginbox">
     <img src="avatar.png" class="avatar">
-        <h1>Login Here</h1>
-        <form>
-            <p>Username</p>
-            <input type="text" name="" placeholder="Enter Username">
-            <p>Password</p>
-            <input type="password" name="" placeholder="Enter Password">
-            <button class="btn btn-danger" formaction="https://drive.google.com/file/d/1DsDhf4--tXm2BVGmcAofTbkhOq0i4sVF/view">Log In!</button>
-            <br>
-            <br>
-            <button class="btn btn-danger" id="myBtn">don't have an account</button>
+    <div id="signin">
+      <center><h1>Sign In</h1></center>
+      <center>
+        <form id="signin" name="signin" method="post" action="/signin">
+          <label>Username</label>
+          <input type="text" placeholder="" name="username" id="username">
+          <br>
+          <label>Password</label>
+          <input type="password" placeholder="" name="password" id="password">
+          <br>
+          <input class="btn btn-danger" type="submit" value="Sign In" id="login" href="home.html"/>
         </form>
+        <br>
+        <hr>
+      </center>
+      </div>
+      <footer>
+      <button class="btn btn-danger" id="myBtn">Sign Up!</button>
         
     </div>
     <script>// Get the modal
-        var modal = document.getElementById('myModal');
-      
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-      
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-      
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function () {
-          modal.style.display = "block";
-        }
-      
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+      var modal = document.getElementById('myModal');
+    
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+    
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+    
+      // When the user clicks on the button, open the modal 
+      btn.onclick = function () {
+        modal.style.display = "block";
+      }
+    
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+    
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
           modal.style.display = "none";
         }
-      
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        }</script>
-      
-      </html>
-
+      }</script>
+    
 </body>

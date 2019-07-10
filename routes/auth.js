@@ -14,10 +14,10 @@ module.exports = function (app, passport) {
     }
     //////////////////// HTML Routes //////////////////////////////////////////////////////////////////////
     app.get('/', authController.signin);
-    app.get('/signin', authController.signin);
+    app.get('/home', authController.signin);
     app.get('/login', authController.signin);
     // meal planner html route
-    app.get('/mealplanner',isLoggedIn, authController.mealplanner);
+    app.get('/home',isLoggedIn, authController.mealplanner);
     //////////////////// HOME /////////////////////////////////////////////////////////////////////////////
     app.get('/home', isLoggedIn, authController.home);
 
